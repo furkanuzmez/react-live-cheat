@@ -1,0 +1,202 @@
+/* Flexbox layout for content to display header, footer, and content */
+.container {
+  display: flex;
+  flex-direction: column; /* Column layout for header, content, and footer */
+  height: 100vh; /* Full viewport height */
+  background-color: #f1f3f4; /* Light background */
+}
+
+/* Header Styling */
+.header {
+  background-color: #13315c; /* Dark blue */
+  color: white; /* White text */
+  padding: 15px 20px; /* Padding for spacing */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between elements */
+  font-size: 18px;
+  flex-shrink: 0; /* Prevent shrinking of the header */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #13315c; /* Dark blue */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding for spacing */
+  text-align: center; /* Centered text */
+  font-size: 14px;
+  flex-shrink: 0; /* Prevent shrinking of the footer */
+}
+
+/* Content area styling */
+.content {
+  display: flex;
+  flex: 1; /* This makes the content area grow and fill the remaining space between header and footer */
+  overflow: hidden;
+}
+
+/* Sidebar for component list */
+.sidebar {
+  width: 240px;
+  background-color: #13315c; /* Dark blue for sidebar */
+  color: white; /* White text for better readability */
+  padding: 20px;
+  overflow-y: auto; /* Make sure the sidebar scrolls if content overflows */
+}
+
+.sidebar h3 {
+  color: #fff; /* White title */
+  display: flex;
+  align-items: center; /* Aligns the icon with the text vertically */
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  background-color: #13315c;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Sidebar item hover */
+.sidebar li:hover {
+  background-color: #52796f; /* Green on hover */
+}
+
+/* Sidebar item when selected */
+.sidebar li.selected {
+  background-color: #f95738; /* Orange for the selected item */
+  color: white;
+}
+
+/* Sidebar li icon margin */
+.sidebar li svg {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Flex layout for left (code) and right (live result) panes */
+.panes {
+  display: flex;
+  flex: 1;
+  overflow: hidden; /* Ensure that panes do not overflow */
+}
+
+/* Code display on the left side */
+.left-pane {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  background-color: white; /* White background for code view */
+  color: #13315c; /* Dark blue text for code */
+  height: 100%; /* Ensure left pane takes full available height */
+}
+
+/* Live view display on the right side */
+.right-pane {
+  flex: 1;
+  padding: 20px;
+  background-color: #f1f3f4; /* Light background for live view */
+  color: #52796f; /* Green text color */
+  overflow-y: auto;
+  height: 100%; /* Ensure right pane takes full available height */
+}
+
+/* Code block styling */
+pre {
+  background-color: #e0e0e0; /* Light gray background for code blocks */
+  color: #13315c; /* Dark blue text */
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: pre-wrap; /* Allows line breaking */
+  overflow-x: auto;
+}
+
+/* Search bar inside the header */
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  padding-left: 35px;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  left: 10px;
+  color: #333;
+}
+
+/* Custom scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f3f4; /* Light background for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #13315c; /* Dark blue for the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #52796f; /* Green color on hover */
+}
+
+/* Custom scrollbar styles for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #13315c #f1f3f4; /* Dark blue thumb with light background track */
+}
+
+/* Optional: Customize scrollbars in specific containers (like .sidebar) */
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #f95738; /* Orange for sidebar scrollbar thumb */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #52796f; /* Green on hover for sidebar scrollbar */
+}
+
+/* Apply the same custom scrollbar for left and right panes */
+.left-pane::-webkit-scrollbar,
+.right-pane::-webkit-scrollbar {
+  width: 5px;
+}
+
+.left-pane::-webkit-scrollbar-thumb,
+.right-pane::-webkit-scrollbar-thumb {
+  background-color: #13315c; /* Dark blue for the main content scrollbars */
+}
+
+.left-pane::-webkit-scrollbar-thumb:hover,
+.right-pane::-webkit-scrollbar-thumb:hover {
+  background-color: #52796f; /* Green hover effect */
+}
