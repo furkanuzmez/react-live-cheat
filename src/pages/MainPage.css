@@ -1,53 +1,53 @@
 /* Flexbox layout for content to display header, footer, and content */
 .container {
   display: flex;
-  flex-direction: column; /* Column layout for header, content, and footer */
-  height: 100vh; /* Full viewport height */
-  background-color: #f1f3f4; /* Light background */
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f1f3f4;
 }
 
 /* Header Styling */
 .header {
-  background-color: #13315c; /* Dark blue */
-  color: white; /* White text */
-  padding: 15px 20px; /* Padding for spacing */
+  background-color: #13315c;
+  color: white;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Space between elements */
+  justify-content: space-between;
   font-size: 18px;
-  flex-shrink: 0; /* Prevent shrinking of the header */
+  flex-shrink: 0;
 }
 
 /* Footer Styling */
 .footer {
-  background-color: #13315c; /* Dark blue */
-  color: white; /* White text */
-  padding: 10px 20px; /* Padding for spacing */
-  text-align: center; /* Centered text */
+  background-color: #13315c;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
   font-size: 14px;
-  flex-shrink: 0; /* Prevent shrinking of the footer */
+  flex-shrink: 0;
 }
 
 /* Content area styling */
 .content {
   display: flex;
-  flex: 1; /* This makes the content area grow and fill the remaining space between header and footer */
+  flex: 1;
   overflow: hidden;
 }
 
 /* Sidebar for component list */
 .sidebar {
   width: 240px;
-  background-color: #13315c; /* Dark blue for sidebar */
-  color: white; /* White text for better readability */
+  background-color: #13315c;
+  color: white;
   padding: 20px;
-  overflow-y: auto; /* Make sure the sidebar scrolls if content overflows */
+  overflow-y: auto;
 }
 
 .sidebar h3 {
-  color: #fff; /* White title */
+  color: #fff;
   display: flex;
-  align-items: center; /* Aligns the icon with the text vertically */
+  align-items: center;
   margin-top: 0;
 }
 
@@ -68,27 +68,24 @@
   transition: background-color 0.3s;
 }
 
-/* Sidebar item hover */
 .sidebar li:hover {
-  background-color: #52796f; /* Green on hover */
+  background-color: #52796f;
 }
 
-/* Sidebar item when selected */
 .sidebar li.selected {
-  background-color: #f95738; /* Orange for the selected item */
+  background-color: #f95738;
   color: white;
 }
 
-/* Sidebar li icon margin */
 .sidebar li svg {
-  margin-right: 10px; /* Space between icon and text */
+  margin-right: 10px;
 }
 
 /* Flex layout for left (code) and right (live result) panes */
 .panes {
   display: flex;
   flex: 1;
-  overflow: hidden; /* Ensure that panes do not overflow */
+  overflow: hidden;
 }
 
 /* Code display on the left side */
@@ -97,29 +94,29 @@
   padding: 20px;
   border-right: 1px solid #ccc;
   overflow-y: auto;
-  background-color: white; /* White background for code view */
-  color: #13315c; /* Dark blue text for code */
-  height: 100%; /* Ensure left pane takes full available height */
+  background-color: white;
+  color: #13315c;
+  height: 100%;
 }
 
 /* Live view display on the right side */
 .right-pane {
   flex: 1;
   padding: 20px;
-  background-color: #f1f3f4; /* Light background for live view */
-  color: #52796f; /* Green text color */
+  background-color: #f1f3f4;
+  color: #52796f;
   overflow-y: auto;
-  height: 100%; /* Ensure right pane takes full available height */
+  height: 100%;
 }
 
 /* Code block styling */
 pre {
-  background-color: #e0e0e0; /* Light gray background for code blocks */
-  color: #13315c; /* Dark blue text */
+  background-color: #e0e0e0;
+  color: #13315c;
   padding: 15px;
   border-radius: 5px;
   font-size: 14px;
-  white-space: pre-wrap; /* Allows line breaking */
+  white-space: pre-wrap;
   overflow-x: auto;
 }
 
@@ -150,26 +147,26 @@ pre {
 
 /* Custom scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
-  width: 5px; /* Width of the scrollbar */
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f1f3f4; /* Light background for the scrollbar track */
+  background-color: #f1f3f4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #13315c; /* Dark blue for the scrollbar thumb */
-  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  background-color: #13315c;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #52796f; /* Green color on hover */
+  background-color: #52796f;
 }
 
 /* Custom scrollbar styles for Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #13315c #f1f3f4; /* Dark blue thumb with light background track */
+  scrollbar-color: #13315c #f1f3f4;
 }
 
 /* Optional: Customize scrollbars in specific containers (like .sidebar) */
@@ -178,11 +175,11 @@ pre {
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background-color: #f95738; /* Orange for sidebar scrollbar thumb */
+  background-color: #f95738;
 }
 
 .sidebar::-webkit-scrollbar-thumb:hover {
-  background-color: #52796f; /* Green on hover for sidebar scrollbar */
+  background-color: #52796f;
 }
 
 /* Apply the same custom scrollbar for left and right panes */
@@ -193,10 +190,102 @@ pre {
 
 .left-pane::-webkit-scrollbar-thumb,
 .right-pane::-webkit-scrollbar-thumb {
-  background-color: #13315c; /* Dark blue for the main content scrollbars */
+  background-color: #13315c;
 }
 
 .left-pane::-webkit-scrollbar-thumb:hover,
 .right-pane::-webkit-scrollbar-thumb:hover {
-  background-color: #52796f; /* Green hover effect */
+  background-color: #52796f;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  /* Hide the sidebar on mobile */
+  .sidebar {
+    display: none;
+  }
+
+  /* Adjust the content layout to take the full width */
+  .content {
+    flex-direction: column;
+  }
+
+  /* Pane adjustments for mobile */
+  .panes {
+    flex-direction: column;
+  }
+
+  .left-pane,
+  .right-pane {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  /* Reduce padding and font sizes for smaller screens */
+  .header,
+  .footer {
+    padding: 10px;
+  }
+
+  .header {
+    font-size: 16px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+
+  .left-pane,
+  .right-pane {
+    padding: 15px;
+  }
+
+  pre {
+    font-size: 12px;
+  }
+}
+/* Main button styling */
+button {
+  background-color: #45a049;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Add the shining effect from your original code */
+button.shining {
+  background-color: #f95738;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  /* Decrease Funcodemy button size on small screens */
+  button {
+    padding: 10px 20px; /* Reduce padding */
+    font-size: 14px; /* Reduce font size */
+    border-radius: 5px; /* Smaller border radius for compact look */
+  }
+
+  /* Further adjustments for even smaller screens (e.g., below 480px) */
+  @media (max-width: 480px) {
+    button {
+      padding: 8px 16px; /* Even smaller padding for tiny screens */
+      font-size: 12px; /* Smaller font size */
+    }
+  }
 }

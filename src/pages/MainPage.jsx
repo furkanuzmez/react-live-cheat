@@ -130,7 +130,7 @@ const MainPage = () => {
           />
         </div>
         <div>
-          <button style={buttonStyle} onClick={handleNavigation}>
+          <button  onClick={handleNavigation}>
             Funcodemy
           </button>
         </div>
